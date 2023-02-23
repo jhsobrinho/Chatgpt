@@ -101,6 +101,7 @@ export const send = async (
     if (messageData.number === undefined) {
       throw new Error('O número é obrigatório');
     }
+    const maxTicketId = await Ticket.max("id") || 0;
 
     const number = messageData.number;
     let body = messageData.body;
@@ -115,15 +116,17 @@ export const send = async (
         status: "open"
       });
       body = `[Novo ticket aberto]\n\n${body}`;
-      await SendMessage({
+      await SendMessage(whatsapp, {
         message: {
-          chatId: whatsapp.id,
-          body: body,
+          ticketId: ticket.id,
+          fromMe: true,
+          body: message,
+          quotedMsg,
         },
         ticket,
       });
     } else {
-      ticket = await ShowTicketService(ticketId);
+      ticket = await ShowTicketService(ticket.id);
       SetTicketMessagesAsRead(ticket);
     }
 
@@ -137,7 +140,7 @@ export const send = async (
                 number,
                 body: openTicket === "1" ? media.originalname : `\u200c${media.originalname}`,
                 mediaPath: media.path,
-                ticketId: openTicket === "1" ? ticket.id : ticketId,
+                ticketId: openTicket === "1" ? ticket.id : undefined,
               }
             }, { removeOnComplete: true, attempts: 3 });
         })
