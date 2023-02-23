@@ -1,0 +1,12 @@
+2023/02/23-17:05:25.161 5244 Reusing MANIFEST D:\whaticket\local_craso\backend\.wwebjs_auth\session-bd_1\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/02/23-17:05:25.163 5244 Recovering log #111
+2023/02/23-17:05:25.236 5244 Reusing old log D:\whaticket\local_craso\backend\.wwebjs_auth\session-bd_1\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000111.log 
+2023/02/23-17:05:36.990 5244 Level-0 table #118: started
+2023/02/23-17:05:37.096 5244 Level-0 table #118: 971885 bytes OK
+2023/02/23-17:05:37.098 5244 Delete type=0 #111
+2023/02/23-17:05:38.483 5244 Compacting 1@1 + 3@2 files
+2023/02/23-17:05:38.617 5244 Generated table #119@1: 56092 keys, 2222804 bytes
+2023/02/23-17:05:38.691 5244 Generated table #120@1: 24274 keys, 2190555 bytes
+2023/02/23-17:05:38.799 5244 Generated table #121@1: 54388 keys, 2065488 bytes
+2023/02/23-17:05:38.799 5244 Compacted 1@1 + 3@2 files => 6478847 bytes
+2023/02/23-17:05:38.800 5244 compacted to: files[ 0 0 3 0 0 0 0 ]
